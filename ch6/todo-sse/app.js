@@ -21,6 +21,7 @@ let sseId = 1
 
 app.get('/api/todos/events', (req, res) => {
   req.socket.setTimeout(0)
+  req.socket.setTimeout(1000)
   res.set({
     'Content-Type': 'text/event-stream'
   })
