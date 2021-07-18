@@ -27,7 +27,6 @@ app.post('/api/todos', (req, res, next) => {
 })
 
 function completedHandler(completed) {
-  console.log('here')
   return (req, res, next) => dataStorage.update(req.params.id, { completed }).then(todo => {
     if (todo) {
       return res.json(todo)
